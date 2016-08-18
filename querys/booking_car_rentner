@@ -1,0 +1,6 @@
+﻿SELECT rentner.first_name, rentner.last_name, car.brand,car.brand_type, car.license_plate_number, booking.start_date, booking.end_date
+from booking
+LEFT JOIN car
+ON booking.car_id=car.id
+LEFT JOIN rentner
+ON booking.rentner_id=rentner.id
